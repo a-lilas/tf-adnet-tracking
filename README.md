@@ -31,6 +31,17 @@ Tensorflow Implementation of 'Action-Decision Networks for Visual Tracking with 
 $ python runner.py by_dataset  --vid-path=./data/freeman1/
 ```
 
+### OTB100 Dataset (with Docker on Ubuntu 16.04)
+
+`$D_X11` is a shell variable to use GUI(X11) with Docker on Ubuntu.
+
+```
+cd tf-adnet-tracking/docker
+docker build -t <name> .
+nvidia-docker run $D_X11 -v /path/to/tf-adnet-tracking:/home/tf-adnet-tracking -it <name>
+python3 runner.py by_dataset  --vid-path=./data/freeman1/
+```
+
 ## References
 
 - (Korean, 한국어) Review : http://openresearch.ai/t/adnet-action-decision-networks-for-visual-tracking-with-deep-reinforcement-learning/123
